@@ -8,10 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import { useCurrentRoute } from "../../composables/currentRoute";
-const title = ref("Hello");
-useCurrentRoute();
+import { ref } from 'vue'
+const title = ref('Hello')
 </script>
 
 <style>

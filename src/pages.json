@@ -1,75 +1,16 @@
 {
-  "pages": [
-    {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "home"
-      }
-    },
-    {
-      "path": "pages/login/index",
-      "style": {
-        "navigationBarTitleText": "login",
-        "topWindow": false,
-        "leftWindow": false
-      }
-    },
-    {
-      "path": "pages/account/index",
-      "style": {
-        "navigationBarTitleText": "account",
-        "topWindow": false,
-        "leftWindow": false
-      }
-    },
-    {
-      "path": "pages/page2/index",
-      "style": {
-        "navigationBarTitleText": "page2"
-      }
-    },
-    {
-      "path": "pages/page3/index",
-      "style": {
-        "navigationBarTitleText": "page3"
-      }
-    },
-    {
-      "path": "pages/page4/index",
-      "style": {
-        "navigationBarTitleText": "page4"
-      }
-    }
-  ],
-  "globalStyle": {
-    "navigationStyle": "custom",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
-  "topWindow": {
-    "path": "responsive/top-window.vue",
-    "style": {
-      "height": "62px"
-    },
-    "matchMedia": {
-      "minWidth": 0
-    }
-  },
-  "leftWindow": {
-    "path": "responsive/left-window.vue",
-    "style": {
-      "width": "300px"
-    },
-    "matchMedia": {
-      "minWidth": 1000
-    }
-  },
-  "easycom": {
-    "autoscan": true,
-    "custom": {
-      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
-    }
-  }
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
 }
