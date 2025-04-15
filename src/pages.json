@@ -1,16 +1,107 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app-template"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app-template"
+      }
+    },
+    {
+      "path": "pages/start/index",
+      "style": {
+        "navigationBarTitleText": "开始"
+      }
+    },
+    {
+      "path": "pages/component/index",
+      "style": {
+        "navigationBarTitleText": "内置组件"
+      }
+    },
+    {
+      "path": "pages/uni-api/index",
+      "style": {
+        "navigationBarTitleText": "API"
+      }
+    },
+    {
+      "path": "pages/uni-ui/index",
+      "style": {
+        "navigationBarTitleText": "扩展组件"
+      }
+    },
+    {
+      "path": "pages/start/page",
+      "style": {
+        "navigationBarTitleText": "页面"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "height": "50px",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "3px",
+    // "iconfontSrc": "static/iconfont.ttf", // app tabbar 字体.ttf文件路径 app 3.4.4+
+    "list": [
+      {
+        "pagePath": "pages/start/index",
+        // "iconPath": "static/image/icon_component.png",
+        // "selectedIconPath": "static/image/icon_component_HL.png",
+        "text": "开始",
+        // "iconfont": {
+        //   // 优先级高于 iconPath，该属性依赖 tabbar 根节点的 iconfontSrc
+        //   "text": "\ue102",
+        //   "selectedText": "\ue103",
+        //   "fontSize": "17px",
+        //   "color": "#000000",
+        //   "selectedColor": "#0000ff"
+        // }
+      },
+      {
+        "pagePath": "pages/component/index",
+        // "iconPath": "static/image/icon_API.png",
+        // "selectedIconPath": "static/image/icon_API_HL.png",
+        "text": "内置组件"
+      },
+      {
+        "pagePath": "pages/uni-api/index",
+        // "iconPath": "static/image/icon_API.png",
+        // "selectedIconPath": "static/image/icon_API_HL.png",
+        "text": "API"
+      },
+      {
+        "pagePath": "pages/uni-ui/index",
+        // "iconPath": "static/image/icon_API.png",
+        // "selectedIconPath": "static/image/icon_API_HL.png",
+        "text": "扩展组件"
+      }
+    ]
+    // "midButton": {
+    //   "width": "80px",
+    //   "height": "50px",
+    //   "text": "文字",
+    //   "iconPath": "static/image/midButton_iconPath.png",
+    //   "iconWidth": "24px",
+    //   "backgroundImage": "static/image/midButton_backgroundImage.png"
+    // }
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }

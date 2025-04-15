@@ -1,0 +1,40 @@
+<script setup lang="ts">
+const list = [{
+	id: 'page',
+	name: '页面'
+}, {
+	id: "css",
+	name: "样式"
+}, {
+	id: 'adapt',
+	name: '宽屏适配'
+}, {
+	id: 'dark-mode',
+	name: '暗黑模式'
+}, {
+	id: 'i18n',
+	name: '国际化'
+}]
+</script>
+
+<template>
+	<div class="content">
+		<text>uni-app基础特性，文档详见：</text>
+		<uni-link href="https://uniapp.dcloud.net.cn/tutorial/" text="http://uniapp.dcloud.net.cn/"></uni-link>
+		<view class="buttons">
+			<navigator v-for="item in list" :url="`/pages/start/${item.id}`">
+				<button>{{ item.name }}</button>
+			</navigator>
+		</view>
+	</div>
+</template>
+
+<style>
+.buttons {
+	margin-top: 30rpx;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	row-gap: 15px;
+}
+</style>

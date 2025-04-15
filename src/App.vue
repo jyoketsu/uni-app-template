@@ -10,4 +10,19 @@ onHide(() => {
   console.log("App Hide");
 });
 </script>
-<style></style>
+<style>
+.content {
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 12rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #8f8f94;
+}
+</style>

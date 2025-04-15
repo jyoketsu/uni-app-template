@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.nvue": "vue"
+  },
+  "vue.server.hybridMode": false
+}
