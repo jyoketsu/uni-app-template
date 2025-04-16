@@ -1,4 +1,71 @@
 <script setup lang="ts">
+const props = defineProps({
+	active: {
+		type: String,
+		default: ''
+	}
+})
+const list = [{
+	id: 'interceptor',
+	name: '拦截器'
+}, {
+	id: "request",
+	name: "Request"
+}, {
+	id: 'network-file',
+	name: '上传、下载'
+}, {
+	id: 'websocket',
+	name: 'WebSocket'
+}, {
+	id: 'navigator',
+	name: '路由跳转'
+}]
 </script>
 
-<template>api</template>
+<template>
+	<div class="content">
+		<view class="description hideOnPc">
+			<text>uni-app的接口能力，文档详见：</text>
+			<uni-link href="https://uniapp.dcloud.io/api/" text="https://uniapp.dcloud.io/api/"></uni-link>
+		</view>
+		<view class="buttons">
+			<navigator v-for="item in list" :url="`/pages/uni-api/${item.id}`" class="tab-bar-navigator">
+				<text :class="active === item.id ? 'active' : ''">{{ item.name }}</text>
+			</navigator>
+		</view>
+	</div>
+</template>
+
+<style scoped>
+.buttons {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	row-gap: 15px;
+}
+
+.uni-app--showleftwindow .buttons{
+	row-gap: 2px;
+}
+
+.tab-bar-navigator {
+	padding: 8px 5px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #eaecef;
+}
+
+.uni-app--showleftwindow .tab-bar-navigator {
+	text-align: left;
+	border: unset;
+}
+
+.description {
+	margin-bottom: 30rpx;
+}
+
+.active {
+	color: #179b16;
+}
+</style>

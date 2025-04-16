@@ -2,6 +2,8 @@
 import { onHide, onLoad, onReady, onResize, onShow, onUnload } from '@dcloudio/uni-app';
 import Route from './route.vue';
 import { ref } from 'vue';
+import DemoItem from '@/components/DemoItem.vue';
+import DemoContainer from '@/components/DemoContainer.vue';
 
 const routeType = ref<'navigator' | 'api'>('navigator');
 
@@ -61,41 +63,43 @@ const radioChange = (e: any) => {
 </script>
 
 <template>
-	<view class="content">
-		<text class="title">生命周期</text>
-		<uni-link href="http://uniapp.dcloud.net.cn/tutorial/page.html#lifecycle" text="页面生命周期"></uni-link>
+	<DemoContainer doc-url="https://uniapp.dcloud.net.cn/tutorial/page.html">
+		<DemoItem title="生命周期">
+			<uni-link href="http://uniapp.dcloud.net.cn/tutorial/page.html#lifecycle" text="页面生命周期"></uni-link>
+		</DemoItem>
 
-		<text class="title">页面调用接口</text>
-		<uni-link
-			href="https://uniapp.dcloud.net.cn/tutorial/page.html#%E9%A1%B5%E9%9D%A2%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3"
-			text="页面调用接口"></uni-link>
+		<DemoItem title="页面调用接口">
+			<uni-link
+				href="https://uniapp.dcloud.net.cn/tutorial/page.html#%E9%A1%B5%E9%9D%A2%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3"
+				text="页面调用接口"></uni-link>
+		</DemoItem>
 
-		<text class="title">页面通讯</text>
-		<button @click="handleEmit" style="width: 100%;">发送消息</button>
+		<DemoItem title="页面通讯">
+			<button @click="handleEmit" style="width: 100%;">发送消息</button>
+		</DemoItem>
 
-		<text class="title">路由</text>
+		<DemoItem title="路由">
+			<radio-group class="route-radio-group" @change="radioChange">
+				<label class="route-radio">
+					<view>
+						<radio value="navigator" :checked="routeType === 'navigator'" />
+					</view>
+					<view>navigator</view>
+				</label>
+				<label class="route-radio">
+					<view>
+						<radio value="api" :checked="routeType === 'api'" />
+					</view>
+					<view>api</view>
+				</label>
+			</radio-group>
 
-		<radio-group class="route-radio-group" @change="radioChange">
-			<label class="route-radio">
-				<view>
-					<radio value="navigator" :checked="routeType === 'navigator'" />
-				</view>
-				<view>navigator</view>
-			</label>
-			<label class="route-radio">
-				<view>
-					<radio value="api" :checked="routeType === 'api'" />
-				</view>
-				<view>api</view>
-			</label>
-		</radio-group>
-
-		<Route :type="routeType" style="width: 100%;" />
-
-	</view>
+			<Route :type="routeType" style="width: 100%;" />
+		</DemoItem>
+	</DemoContainer>
 </template>
 
-<style>
+<style scoped>
 .route-radio-group,
 .route-radio {
 	display: flex;

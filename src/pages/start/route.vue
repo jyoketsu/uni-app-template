@@ -74,7 +74,7 @@ const reLaunch = () => {
 	</view>
 </template>
 
-<style>
+<style scoped>
 .container {
 	width: 100%;
 }

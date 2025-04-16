@@ -11,7 +11,27 @@ onHide(() => {
 });
 </script>
 <style>
+.uni-top-window {
+  border-bottom: 1px solid #eaecef;
+  z-index: 999;
+}
+
+uni-left-window {
+  border-right: 1px solid #eaecef;
+  z-index: 888;
+}
+
+.uni-app--showleftwindow .hideOnPc {
+  display: none;
+}
+
+.uni-app--showleftwindow .uni-page-head-hd {
+  display: none;
+}
+
 .content {
+  max-width: 1190px;
+  margin: 0 auto;
   padding: 25rpx;
   display: flex;
   flex-direction: column;
@@ -21,7 +41,7 @@ onHide(() => {
 }
 
 .title {
-  font-size: 32rpx;
+  font-size: 36rpx;
   font-weight: bold;
   color: #8f8f94;
 }

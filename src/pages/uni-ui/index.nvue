@@ -1,4 +1,72 @@
 <script setup lang="ts">
+const props = defineProps({
+	active: {
+		type: String,
+		default: ''
+	}
+})
+const list = [{
+	id: 'uni-badge',
+	name: 'uni-badge (数字角标)'
+}, {
+	id: "uni-breadcrumb",
+	name: "uni-breadcrumb (面包屑)"
+}, {
+	id: 'uni-calendar',
+	name: 'uni-calendar (日历)'
+}, {
+	id: 'uni-card',
+	name: 'uni-card (卡片)'
+}, {
+	id: 'uni-collapse',
+	name: 'uni-collapse (折叠面板)'
+}]
 </script>
 
-<template>uni-ui</template>
+<template>
+	<div class="content">
+		<view class="description hideOnPc">
+			<text>uni-ui扩展组件示例，文档详见：</text>
+			<uni-link href="https://uniapp.dcloud.net.cn/component/uniui/uni-ui.html"
+				text="https://uniapp.dcloud.net.cn/tutorial/"></uni-link>
+		</view>
+		<view class="buttons">
+			<navigator v-for="item in list" :url="`/pages/uni-ui/${item.id}`" class="tab-bar-navigator">
+				<text :class="active === item.id ? 'active' : ''">{{ item.name }}</text>
+			</navigator>
+		</view>
+	</div>
+</template>
+
+<style scoped>
+.buttons {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	row-gap: 15px;
+}
+
+.uni-app--showleftwindow .buttons {
+	row-gap: 2px;
+}
+
+.tab-bar-navigator {
+	padding: 8px 5px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #eaecef;
+}
+
+.uni-app--showleftwindow .tab-bar-navigator {
+	text-align: left;
+	border: unset;
+}
+
+.description {
+	margin-bottom: 30rpx;
+}
+
+.active {
+	color: #179b16;
+}
+</style>

@@ -36,6 +36,30 @@
       "style": {
         "navigationBarTitleText": "页面"
       }
+    },
+    {
+      "path": "pages/start/adapt",
+      "style": {
+        "navigationBarTitleText": "宽屏适配"
+      }
+    },
+    {
+      "path": "pages/component/view",
+      "style": {
+        "navigationBarTitleText": "视图容器"
+      }
+    },
+    {
+      "path": "pages/uni-api/interceptor",
+      "style": {
+        "navigationBarTitleText": "拦截器"
+      }
+    },
+    {
+      "path": "pages/uni-ui/uni-badge",
+      "style": {
+        "navigationBarTitleText": "数字角标"
+      }
     }
   ],
   "tabBar": {
@@ -53,7 +77,7 @@
         "pagePath": "pages/start/index",
         // "iconPath": "static/image/icon_component.png",
         // "selectedIconPath": "static/image/icon_component_HL.png",
-        "text": "开始",
+        "text": "开始"
         // "iconfont": {
         //   // 优先级高于 iconPath，该属性依赖 tabbar 根节点的 iconfontSrc
         //   "text": "\ue102",
@@ -91,6 +115,18 @@
     //   "backgroundImage": "static/image/midButton_backgroundImage.png"
     // }
   },
+  "topWindow": {
+    "path": "windows/top-window.vue",
+    "style": {
+      "height": "52px"
+    }
+  },
+  "leftWindow": {
+    "path": "windows/left-window.vue",
+    "style": {
+      "width": "320px"
+    }
+  },
   "easycom": {
     "autoscan": true,
     "custom": {
@@ -102,6 +138,12 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "rpxCalcMaxDeviceWidth": 768,
+    "h5": {
+      // "maxWidth": 1190,
+      "navigationBarTextStyle": "black",
+      "navigationBarBackgroundColor": "#F1F1F1"
+    }
   }
 }

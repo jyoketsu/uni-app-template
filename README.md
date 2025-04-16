@@ -1,7 +1,8 @@
 # uni-app-template
 
-[uni-app Docs](https://uniapp.dcloud.net.cn/tutorial/)  
-[微信小程序文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+[官方文档](https://uniapp.dcloud.net.cn/tutorial/)  
+[微信小程序文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)  
+[官方示例](https://github.com/dcloudio/hello-uniapp/)
 
 ## 目录结构
 
@@ -40,6 +41,14 @@
 ```
 
 ## 页面
+
 [pages.json](./src/pages.json)  
 [page.vue](./src/pages/start/page.vue)  
 [route.vue](./src/pages/start/route.vue)
+
+## 宽屏适配
+
+[pages.json](./src/pages.json)  
+[left-window.vue](./src/windows/left-window.vue)  
+[top-window.vue](./src/windows/top-window.vue)  
+[adapt.vue](./src/pages/start/adapt.vue)
