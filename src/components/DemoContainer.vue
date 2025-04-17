@@ -7,15 +7,26 @@ const props = defineProps({
 <template>
 	<view class="content">
 		<view class="description">
-			<text>文档详见：</text>
+			<text class="doc-url-name">文档详见：</text>
 			<uni-link :href="docUrl" :text="docUrl" />
 		</view>
 		<slot />
 	</view>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .content {
 	row-gap: 45rpx;
+}
+
+.doc-url-name {
+	color: $uni-color-title;
+}
+
+@media (prefers-color-scheme: dark) {
+
+	.doc-url-name {
+		color: $uni-color-title-inverse;
+	}
 }
 </style>

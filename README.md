@@ -42,19 +42,30 @@
 
 ## 页面
 
-[pages.json](./src/pages.json)  
-[page.vue](./src/pages/start/page.vue)  
-[route.vue](./src/pages/start/route.vue)
+- [pages.json](./src/pages.json)  
+- [page.vue](./src/pages/start/page.vue)  
+- [route.vue](./src/pages/start/route.vue)
 
 ## 样式
 
-[uni.scss](./src/uni.scss)  
-[global.scss](./src/global.scss)  
-[App.vue](./src/App.vue)
+- [uni.scss](./src/uni.scss)  
+- [global.scss](./src/global.scss)  
+- [App.vue](./src/App.vue)
 
 ## 宽屏适配
 
-[pages.json](./src/pages.json)  
-[left-window.vue](./src/windows/left-window.vue)  
-[top-window.vue](./src/windows/top-window.vue)  
-[adapt.vue](./src/pages/start/adapt.vue)
+- [pages.json](./src/pages.json)  
+- [left-window.vue](./src/windows/left-window.vue)  
+- [top-window.vue](./src/windows/top-window.vue)  
+- [adapt.vue](./src/pages/start/adapt.vue)
+
+## 暗黑模式
+- 配置
+  - [manifest.json](./src/manifest.json) 
+  - [theme.json](./src/theme.json) 
+- 使用
+  - [pages.json](./src/pages.json) 
+  - [dark-mode.vue](./src/pages/start/dark-mode.vue)
+ 
+ 
+

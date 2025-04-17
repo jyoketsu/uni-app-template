@@ -34,7 +34,9 @@
     {
       "path": "pages/start/page",
       "style": {
-        "navigationBarTitleText": "页面"
+        "navigationBarTitleText": "页面",
+        "navigationBarBackgroundColor": "@navBgColor",
+        "navigationBarTextStyle": "@navTxtStyle"
       }
     },
     {
@@ -76,10 +78,10 @@
     }
   ],
   "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
     "height": "50px",
     "fontSize": "10px",
     "iconWidth": "24px",
@@ -148,15 +150,17 @@
     }
   },
   "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom",
     "rpxCalcMaxDeviceWidth": 768,
     "h5": {
       // "maxWidth": 1190,
-      "navigationBarTextStyle": "black",
-      "navigationBarBackgroundColor": "#F1F1F1"
+      "navigationBarTextStyle": "@navTxtStyle",
+      "navigationBarBackgroundColor": "@navBgColor"
     }
   }
 }

@@ -30,10 +30,15 @@ uni-left-window {
 .title {
   font-size: 36rpx;
   font-weight: bold;
-  color: #8f8f94;
+  color: $uni-color-title;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: $uni-color-title-inverse;
+  }
 }
 
 .active {
   color: $uni-color-primary;
 }
-

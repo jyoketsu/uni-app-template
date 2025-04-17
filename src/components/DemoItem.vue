@@ -18,4 +18,8 @@ const props = defineProps({
 	flex-direction: column;
 	row-gap: 5rpx;
 }
+
+.title {
+	margin-bottom: 8px;
+}
 </style>
