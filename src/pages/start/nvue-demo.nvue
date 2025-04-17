@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import {
+	initVueI18n
+} from '@dcloudio/uni-i18n'
+
+// @ts-ignore
+import messages from "@/locale/index";
+
+const { t } = initVueI18n(messages)
+
+</script>
+
+<template>
+	<view class="nvue-demo">
+		<text class="title">{{ $t('index.demo') }}</text>
+	</view>
+</template>
+
+<style scoped>
+.nvue-demo {
+	padding: 45rpx 0;
+	text-align: center;
+}
+</style>

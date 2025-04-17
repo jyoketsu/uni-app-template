@@ -32,7 +32,7 @@ export default {
 
 				if (width >= 768) {
 					let path = newRoute.path
-					if (path === '/' || path.split('/')[3] === 'index') {
+					if (path.split('/')[3] === 'index') {
 						const tabBarName = path.split('/')[2] || 'start';
 						const pageName = this.tabBarPages.find(item => item.id === tabBarName)?.firstPage || 'page';
 						if (pageName) {
@@ -51,8 +51,12 @@ export default {
 
 <template>
 	<view class="top-header">
-		<image class="logo" src="~@/static/logo.png" />
-		<text class="title">uni-app-template</text>
+		<navigator url="/pages/index/index" open-type="navigate">
+			<view class="logo-wrapper">
+				<image class="logo" src="~@/static/logo.png" />
+				<text class="title">uni-app-template</text>
+			</view>
+		</navigator>
 		<i class="space" />
 		<view class="buttons">
 			<navigator v-for="item in tabBarPages" :key="item.id" class="top-navigator"
@@ -91,6 +95,13 @@ export default {
 .top-navigator {
 	padding: 5px;
 	border-radius: 5px;
+}
+
+.logo-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: 15px;
 }
 
 .buttons {

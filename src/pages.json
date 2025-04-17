@@ -4,7 +4,8 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app-template"
+        "navigationBarTitleText": "uni-app-template",
+        "leftWindow": false // 当前页面不显示 leftWindow
       }
     },
     {
@@ -51,11 +52,30 @@
         "navigationBarTitleText": "宽屏适配"
       }
     },
-
     {
       "path": "pages/start/dark-mode",
       "style": {
         "navigationBarTitleText": "暗黑模式"
+      }
+    },
+    {
+      "path": "pages/start/i18n",
+      "style": {
+        // #ifdef MP-WEIXIN
+        "navigationBarTitleText": "国际化",
+        // #else
+        "navigationBarTitleText": "%index.demo%"
+        // #endif
+      }
+    },
+    {
+      "path": "pages/start/nvue-demo",
+      "style": {
+        // #ifdef MP-WEIXIN
+        "navigationBarTitleText": "nvue国际化示例",
+        // #else
+        "navigationBarTitleText": "%index.demo%"
+        // #endif
       }
     },
     {
@@ -134,12 +154,18 @@
     "path": "windows/top-window.vue",
     "style": {
       "height": "52px"
+    },
+    "matchMedia": {
+      "minWidth": 768 //生效条件，当窗口宽度大于768px时显示
     }
   },
   "leftWindow": {
     "path": "windows/left-window.vue",
     "style": {
       "width": "320px"
+    },
+    "matchMedia": {
+      "minWidth": 768 //生效条件，当窗口宽度大于768px时显示
     }
   },
   "easycom": {

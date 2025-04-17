@@ -1,0 +1,13 @@
+{
+  "locale.auto": "System",
+  "locale.en": "English",
+  "locale.zh-hans": "简体中文",
+  "locale.zh-hant": "繁体中文",
+  "locale.ja": "日本語",
+  "index.demo": "uni-app globalization",
+  "index.language-info": "Language information",
+  "index.system-language": "System language",
+  "index.application-language": "Application language",
+  "demo.changeLocale": "Change language",
+  "demo.pageJson": "Change language to view navigationbar text change (excluding WeChat mini program)"
+}

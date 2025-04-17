@@ -5,7 +5,7 @@
 
 uni-left-window {
   border-right: 1px solid #eaecef;
-  z-index: 888;
+  z-index: 998;
 }
 
 .uni-app--showleftwindow .hideOnPc {
@@ -17,6 +17,8 @@ uni-left-window {
 }
 
 .content {
+  width: 100%;
+  box-sizing: border-box;
   max-width: 1190px;
   margin: 0 auto;
   padding: 25rpx;

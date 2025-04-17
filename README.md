@@ -67,5 +67,11 @@
   - [pages.json](./src/pages.json) 
   - [dark-mode.vue](./src/pages/start/dark-mode.vue)
  
- 
-
+ ## 国际化
+ - 配置
+   - [manifest.json](./src/manifest.json)
+   - [locale](./src/locale/index.ts)
+   - [main.ts](./src/main.ts)
+ - 使用
+   - [i18n.vue](./src/pages/start/i18n.vue)
+   - [pages.json](./src/pages.json)

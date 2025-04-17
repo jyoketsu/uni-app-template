@@ -2,6 +2,7 @@
   "name": "",
   "appid": "",
   "description": "",
+  "locale":"zh-Hans" // 设置默认语言，
   "versionName": "1.0.0",
   "versionCode": "100",
   "transformPx": false,
@@ -81,5 +82,5 @@
   "uniStatistics": {
     "enable": false
   },
-  "vueVersion": "3"
+  "vueVersion": "3",
 }
