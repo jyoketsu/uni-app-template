@@ -59,8 +59,4 @@ const list = [{
 .description {
 	margin-bottom: 30rpx;
 }
-
-.active {
-	color: #179b16;
-}
 </style>

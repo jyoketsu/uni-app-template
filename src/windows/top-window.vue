@@ -32,9 +32,9 @@ export default {
 
 				if (width >= 768) {
 					let path = newRoute.path
-					if (path.split('/')[3] === 'index') {
-						const tabBarName = path.split('/')[2];
-						const pageName = this.tabBarPages.find(item => item.id === tabBarName)?.firstPage;
+					if (path === '/' || path.split('/')[3] === 'index') {
+						const tabBarName = path.split('/')[2] || 'start';
+						const pageName = this.tabBarPages.find(item => item.id === tabBarName)?.firstPage || 'page';
 						if (pageName) {
 							uni.redirectTo({
 								url: `/pages/${tabBarName}/${pageName}`
@@ -51,6 +51,7 @@ export default {
 
 <template>
 	<view class="top-header">
+		<image class="logo" src="~@/static/logo.png" />
 		<text class="title">uni-app-template</text>
 		<i class="space" />
 		<view class="buttons">
@@ -96,7 +97,9 @@ export default {
 	font-size: 14px !important;
 }
 
-.active {
-	color: #179b16;
+.logo {
+	width: 20px;
+	height: 20px;
+	margin-right: 8px
 }
 </style>

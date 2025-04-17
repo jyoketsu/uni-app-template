@@ -82,13 +82,13 @@ const radioChange = (e: any) => {
 			<radio-group class="route-radio-group" @change="radioChange">
 				<label class="route-radio">
 					<view>
-						<radio value="navigator" :checked="routeType === 'navigator'" />
+						<radio value="navigator" :checked="routeType === 'navigator'" color="#2b9939" />
 					</view>
 					<view>navigator</view>
 				</label>
 				<label class="route-radio">
 					<view>
-						<radio value="api" :checked="routeType === 'api'" />
+						<radio value="api" :checked="routeType === 'api'" color="#2b9939" />
 					</view>
 					<view>api</view>
 				</label>

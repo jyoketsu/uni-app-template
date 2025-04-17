@@ -38,6 +38,12 @@
       }
     },
     {
+      "path": "pages/start/css",
+      "style": {
+        "navigationBarTitleText": "样式"
+      }
+    },
+    {
       "path": "pages/start/adapt",
       "style": {
         "navigationBarTitleText": "宽屏适配"

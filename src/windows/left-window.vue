@@ -18,7 +18,7 @@ export default {
 	data() {
 		return {
 			currentPath: '',
-			active: ''
+			active: 'StartPage'
 		}
 	},
 	watch: {

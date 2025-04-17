@@ -46,6 +46,12 @@
 [page.vue](./src/pages/start/page.vue)  
 [route.vue](./src/pages/start/route.vue)
 
+## 样式
+
+[uni.scss](./src/uni.scss)  
+[global.scss](./src/global.scss)  
+[App.vue](./src/App.vue)
+
 ## 宽屏适配
 
 [pages.json](./src/pages.json)  
