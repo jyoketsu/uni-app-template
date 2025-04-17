@@ -17,11 +17,11 @@ import DemoItem from '@/components/DemoItem.vue';
 		</DemoItem>
 		<DemoItem title="字体图标">
 			<view class="icons">
-				<text class="test-icon">&#xe716;</text>
-				<text class="test-icon">&#xe71f;</text>
-				<text class="test-icon">&#xe7c6;</text>
-				<text class="test-icon">&#xe7df;</text>
-				<text class="test-icon">&#xe849;</text>
+				<text class="iconfont-icon">&#xe716;</text>
+				<text class="iconfont-icon">&#xe71f;</text>
+				<text class="iconfont-icon">&#xe7c6;</text>
+				<text class="iconfont-icon">&#xe7df;</text>
+				<text class="iconfont-icon">&#xe849;</text>
 			</view>
 		</DemoItem>
 	</DemoContainer>
@@ -32,19 +32,6 @@ import DemoItem from '@/components/DemoItem.vue';
 	width: 20px;
 	height: 20px;
 	margin-right: 8px
-}
-
-@font-face {
-	font-family: 'iconfont';
-	/* Project id 3639604 */
-	src: url('//at.alicdn.com/t/c/font_3639604_s7ofq7zhbm9.woff2?t=1733212734887') format('woff2'),
-		url('//at.alicdn.com/t/c/font_3639604_s7ofq7zhbm9.woff?t=1733212734887') format('woff'),
-		url('//at.alicdn.com/t/c/font_3639604_s7ofq7zhbm9.ttf?t=1733212734887') format('truetype');
-}
-
-.test-icon {
-	font-family: 'iconfont';
-	font-size: 32px;
 }
 
 .icons {

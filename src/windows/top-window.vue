@@ -61,6 +61,9 @@ export default {
 				<text>{{ item.name }}</text>
 			</navigator>
 		</view>
+		<uni-link href="https://github.com/jyoketsu/uni-app-template" :showUnderLine="false">
+			<text class="iconfont-icon">&#xe673;</text>
+		</uni-link>
 	</view>
 </template>
 
@@ -78,6 +81,7 @@ export default {
 	display: flex !important;
 	flex-direction: row !important;
 	align-items: center !important;
+	column-gap: 15px;
 }
 
 .space {
@@ -100,6 +104,5 @@ export default {
 .logo {
 	width: 20px;
 	height: 20px;
-	margin-right: 8px
 }
 </style>
