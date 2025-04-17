@@ -34,6 +34,12 @@ uni-left-window {
 }
 
 @media (prefers-color-scheme: dark) {
+  .uni-top-window {
+    border-bottom: 1px solid #333;
+  }
+  uni-left-window {
+    border-right: 1px solid #333;
+  }
   .title {
     color: $uni-color-title-inverse;
   }

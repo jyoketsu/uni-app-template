@@ -105,4 +105,10 @@ export default {
 	width: 20px;
 	height: 20px;
 }
+
+@media (prefers-color-scheme: dark) {
+	.top-header {
+		background-color: #222222;
+	}
+}
 </style>
