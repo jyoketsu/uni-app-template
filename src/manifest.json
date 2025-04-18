@@ -1,9 +1,9 @@
 {
-  "name": "",
+  "name": "uni-app-template",
   "appid": "",
   "description": "",
-  "locale":"zh-Hans" // 设置默认语言，
-  "versionName": "1.0.0",
+  "locale": "zh-Hans", // 设置默认语言，
+  "versionName": "0.0.1",
   "versionCode": "100",
   "transformPx": false,
   /* 5+App特有相关 */
@@ -63,7 +63,7 @@
   "quickapp": {},
   /* 小程序特有相关 */
   "mp-weixin": {
-    "appid": "",
+    "appid": "wxf3acc99269e9ce5a",
     "setting": {
       "urlCheck": false
     },
@@ -82,5 +82,5 @@
   "uniStatistics": {
     "enable": false
   },
-  "vueVersion": "3",
+  "vueVersion": "3"
 }

@@ -20,6 +20,9 @@ const list = [{
 }, {
 	id: 'i18n',
 	name: '国际化'
+}, {
+	id: 'wechat-login',
+	name: '微信登录'
 }]
 </script>
 
@@ -45,7 +48,7 @@ const list = [{
 	row-gap: 15px;
 }
 
-.uni-app--showleftwindow .buttons{
+.uni-app--showleftwindow .buttons {
 	row-gap: 2px;
 }
 

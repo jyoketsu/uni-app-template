@@ -79,6 +79,12 @@
       }
     },
     {
+      "path": "pages/start/wechat-login",
+      "style": {
+        "navigationBarTitleText": "微信登录"
+      }
+    },
+    {
       "path": "pages/component/view",
       "style": {
         "navigationBarTitleText": "视图容器"
