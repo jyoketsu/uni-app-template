@@ -74,11 +74,11 @@ const radioChange = (e: any) => {
 				text="页面调用接口"></uni-link>
 		</DemoItem>
 
-		<DemoItem title="页面通讯">
+		<DemoItem title="页面通讯" style="width: 100%;">
 			<button @click="handleEmit" style="width: 100%;">发送消息</button>
 		</DemoItem>
 
-		<DemoItem title="路由">
+		<DemoItem title="路由" style="width: 100%;">
 			<radio-group class="route-radio-group" @change="radioChange">
 				<label class="route-radio">
 					<view>

@@ -42,36 +42,50 @@
 
 ## 页面
 
-- [pages.json](./src/pages.json)  
-- [page.vue](./src/pages/start/page.vue)  
+- [pages.json](./src/pages.json)
+- [page.vue](./src/pages/start/page.vue)
 - [route.vue](./src/pages/start/route.vue)
 
 ## 样式
 
-- [uni.scss](./src/uni.scss)  
-- [global.scss](./src/global.scss)  
+- [uni.scss](./src/uni.scss)
+- [global.scss](./src/global.scss)
 - [App.vue](./src/App.vue)
 
 ## 宽屏适配
 
-- [pages.json](./src/pages.json)  
-- [left-window.vue](./src/windows/left-window.vue)  
-- [top-window.vue](./src/windows/top-window.vue)  
+- [pages.json](./src/pages.json)
+- [left-window.vue](./src/windows/left-window.vue)
+- [top-window.vue](./src/windows/top-window.vue)
 - [adapt.vue](./src/pages/start/adapt.vue)
 
 ## 暗黑模式
+
 - 配置
-  - [manifest.json](./src/manifest.json) 
-  - [theme.json](./src/theme.json) 
+  - [manifest.json](./src/manifest.json)
+  - [theme.json](./src/theme.json)
 - 使用
-  - [pages.json](./src/pages.json) 
+  - [pages.json](./src/pages.json)
   - [dark-mode.vue](./src/pages/start/dark-mode.vue)
- 
- ## 国际化
- - 配置
-   - [manifest.json](./src/manifest.json)
-   - [locale](./src/locale/index.ts)
-   - [main.ts](./src/main.ts)
- - 使用
-   - [i18n.vue](./src/pages/start/i18n.vue)
-   - [pages.json](./src/pages.json)
+
+## 国际化
+
+- 配置
+  - [manifest.json](./src/manifest.json)
+  - [locale](./src/locale/index.ts)
+  - [main.ts](./src/main.ts)
+- 使用
+  - [i18n.vue](./src/pages/start/i18n.vue)
+  - [pages.json](./src/pages.json)
+
+## 网络请求
+
+- [request.vue](./src/pages/start/request.vue)
+
+### 拦截器
+
+- [interceptor.ts](./src/utils/interceptor.ts)
+
+## 微信登录
+
+- [wechat-login.vue](./src/pages/start/wechat-login.vue)

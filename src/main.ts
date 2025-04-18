@@ -1,6 +1,7 @@
 import { createSSRApp } from "vue";
 import { createI18n } from "vue-i18n";
 import App from "./App.vue";
+import "@/utils/interceptor";
 import messages from "./locale/index";
 
 let i18nConfig = {

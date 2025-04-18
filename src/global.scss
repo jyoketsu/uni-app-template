@@ -16,6 +16,10 @@ uni-left-window {
   display: none;
 }
 
+.uni-link {
+  width: fit-content;
+}
+
 .content {
   width: 100%;
   box-sizing: border-box;
@@ -49,4 +53,17 @@ uni-left-window {
 
 .active {
   color: $uni-color-primary;
+}
+
+// uni-ui 组件样式覆盖
+@media (prefers-color-scheme: dark) {
+  .uni-section,
+  .uni-list-item {
+    background-color: $uni-bg-color-inverse !important;
+    color: $uni-text-color-inverse !important;
+  }
+  .uni-section__content-title,
+  .uni-list-item__content-title {
+    color: $uni-text-color-inverse !important;
+  }
 }

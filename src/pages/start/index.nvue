@@ -21,6 +21,12 @@ const list = [{
 	id: 'i18n',
 	name: '国际化'
 }, {
+	id: 'request',
+	name: '网络请求'
+}, {
+	id: 'interceptor',
+	name: '拦截器'
+}, {
 	id: 'wechat-login',
 	name: '微信登录'
 }]
