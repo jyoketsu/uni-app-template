@@ -14,6 +14,12 @@ const list = [{
 }, {
 	id: 'swiper',
 	name: 'swiper (可滑动视图)'
+}, {
+	id: 'icon',
+	name: 'icon'
+}, {
+	id: 'progress',
+	name: 'progress'
 }]
 </script>
 
@@ -40,7 +46,7 @@ const list = [{
 	row-gap: 15px;
 }
 
-.uni-app--showleftwindow .buttons{
+.uni-app--showleftwindow .buttons {
 	row-gap: 2px;
 }
 

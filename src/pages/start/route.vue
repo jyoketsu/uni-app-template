@@ -3,7 +3,7 @@ const props = defineProps<{ type: 'navigator' | 'api' }>()
 
 const navigateTo = () => {
 	uni.navigateTo({
-		url: '/pages/start/page'
+		url: '/pages/start/css'
 	});
 }
 
@@ -15,7 +15,7 @@ const navigateBack = () => {
 
 const redirectTo = () => {
 	uni.redirectTo({
-		url: '/pages/start/page'
+		url: '/pages/start/adapt'
 	});
 }
 
@@ -38,7 +38,7 @@ const reLaunch = () => {
 		<template v-if="props.type === 'navigator'">
 			<view class="content buttons">
 				<uni-link href="https://uniapp.dcloud.net.cn/component/navigator" text="navigator"></uni-link>
-				<navigator url="/pages/start/page">
+				<navigator url="/pages/start/css">
 					<button>打开新页面</button>
 				</navigator>
 
@@ -46,7 +46,7 @@ const reLaunch = () => {
 					<button>返回</button>
 				</navigator>
 
-				<navigator url="/pages/start/page" open-type="redirect">
+				<navigator url="/pages/start/adapt" open-type="redirect">
 					<button>重定向</button>
 				</navigator>
 

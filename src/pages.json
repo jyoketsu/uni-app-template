@@ -103,6 +103,30 @@
       }
     },
     {
+      "path": "pages/component/scroll-view",
+      "style": {
+        "navigationBarTitleText": "可滚动视图"
+      }
+    },
+    {
+      "path": "pages/component/swiper",
+      "style": {
+        "navigationBarTitleText": "可滑动视图"
+      }
+    },
+    {
+      "path": "pages/component/icon",
+      "style": {
+        "navigationBarTitleText": "图标"
+      }
+    },
+    {
+      "path": "pages/component/progress",
+      "style": {
+        "navigationBarTitleText": "进度条"
+      }
+    },
+    {
       "path": "pages/uni-api/interceptor",
       "style": {
         "navigationBarTitleText": "拦截器"

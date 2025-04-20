@@ -51,7 +51,7 @@ const isH5 = process.env.VUE_APP_PLATFORM === "h5";
 
 // 统一错误处理函数
 const handleRejection = (err: any) => {
-  const error = err.reason || err;
+  const error = err.reason || err || "系统错误";
   showError(error);
   // 阻止默认处理（H5需要）
   if (isH5 && err.preventDefault) {
