@@ -20,6 +20,9 @@ const list = [{
 	id: "button",
 	name: 'button'
 }, {
+	id: 'checkbox',
+	name: 'checkbox'
+}, {
 	id: 'icon',
 	name: 'icon'
 }, {

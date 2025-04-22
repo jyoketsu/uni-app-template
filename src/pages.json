@@ -139,6 +139,12 @@
       }
     },
     {
+      "path": "pages/component/checkbox",
+      "style": {
+        "navigationBarTitleText": "checkbox"
+      }
+    },
+    {
       "path": "pages/uni-api/interceptor",
       "style": {
         "navigationBarTitleText": "拦截器"
