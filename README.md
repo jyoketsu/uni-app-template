@@ -46,6 +46,10 @@
 - [page.vue](./src/pages/start/page.vue)
 - [route.vue](./src/pages/start/route.vue)
 
+## 条件编译
+
+- [preprocessor.vue](./src/pages/start/preprocessor.vue)
+
 ## 样式
 
 - [uni.scss](./src/uni.scss)
