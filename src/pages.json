@@ -133,6 +133,12 @@
       }
     },
     {
+      "path": "pages/component/button",
+      "style": {
+        "navigationBarTitleText": "button"
+      }
+    },
+    {
       "path": "pages/uni-api/interceptor",
       "style": {
         "navigationBarTitleText": "拦截器"

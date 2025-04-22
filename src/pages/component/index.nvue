@@ -1,10 +1,12 @@
 <script setup lang="ts">
+
 const props = defineProps({
 	active: {
 		type: String,
 		default: ''
 	}
 })
+
 const list = [{
 	id: 'view',
 	name: 'view (视图容器)'
@@ -14,6 +16,9 @@ const list = [{
 }, {
 	id: 'swiper',
 	name: 'swiper (可滑动视图)'
+}, {
+	id: "button",
+	name: 'button'
 }, {
 	id: 'icon',
 	name: 'icon'

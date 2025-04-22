@@ -16,7 +16,7 @@ const props = defineProps({
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	row-gap: 5rpx;
+	row-gap: 8px;
 }
 
 .title {
