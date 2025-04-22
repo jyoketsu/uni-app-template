@@ -41,6 +41,12 @@
       }
     },
     {
+      "path": "pages/start/preprocessor",
+      "style": {
+        "navigationBarTitleText": "条件编译"
+      }
+    },
+    {
       "path": "pages/start/css",
       "style": {
         "navigationBarTitleText": "样式"

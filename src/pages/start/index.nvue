@@ -9,6 +9,9 @@ const list = [{
 	id: 'page',
 	name: '页面'
 }, {
+	id: 'preprocessor',
+	name: '条件编译'
+}, {
 	id: "css",
 	name: "样式"
 }, {

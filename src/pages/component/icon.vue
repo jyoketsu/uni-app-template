@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import DemoContainer from '@/components/DemoContainer.vue';
 import DemoItem from '@/components/DemoItem.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-const iconType = ref(
+const iconType = ref<string[]>([]);
+
+onMounted(() => {
 	// #ifdef APP-PLUS|| MP-WEIXIN || H5
-	['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear']
+	iconType.value = ['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'];
 	// #endif
 	// #ifdef MP-ALIPAY
-	['info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear', 'success', 'success_no_circle', 'loading']
+	iconType.value = ['info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear', 'success', 'success_no_circle', 'loading'];
 	// #endif
 	// #ifdef MP-BAIDU
-	['success', 'info', 'warn', 'waiting', 'success_no_circle', 'clear', 'search', 'personal', 'setting', 'top', 'close', 'cancel', 'download', 'checkboxSelected', 'radioSelected', 'radioUnselect']
-	// #endif
-);
+	iconType.value = ['success', 'info', 'warn', 'waiting', 'success_no_circle', 'clear', 'search', 'personal', 'setting', 'top', 'close', 'cancel', 'download', 'checkboxSelected', 'radioSelected', 'radioUnselect'];
+	// #endif	
+})
 </script>
 
 <template>
