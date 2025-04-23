@@ -32,6 +32,21 @@ const list = [{
 	id: 'radio',
 	name: 'radio'
 }, {
+	id: 'switch',
+	name: 'switch'
+}, {
+	id: 'picker',
+	name: 'picker'
+}, {
+	id: "picker-view",
+	name: "picker-view"
+}, {
+	id: 'slider',
+	name: 'slider'
+}, {
+	id: 'form',
+	name: 'form'
+}, {
 	id: 'icon',
 	name: 'icon'
 }, {

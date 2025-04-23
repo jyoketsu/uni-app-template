@@ -44,7 +44,8 @@ uni-left-window {
 }
 
 input,
-textarea {
+textarea,
+.uni-picker-container {
   border: 1px solid $uni-border-color;
   border-radius: 8px;
   padding: 12px;

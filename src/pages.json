@@ -163,6 +163,36 @@
       }
     },
     {
+      "path": "pages/component/switch",
+      "style": {
+        "navigationBarTitleText": "switch"
+      }
+    },
+    {
+      "path": "pages/component/picker",
+      "style": {
+        "navigationBarTitleText": "picker"
+      }
+    },
+    {
+      "path": "pages/component/picker-view",
+      "style": {
+        "navigationBarTitleText": "picker-view"
+      }
+    },
+    {
+      "path": "pages/component/slider",
+      "style": {
+        "navigationBarTitleText": "slider"
+      }
+    },
+    {
+      "path": "pages/component/form",
+      "style": {
+        "navigationBarTitleText": "form"
+      }
+    },
+    {
       "path": "pages/uni-api/interceptor",
       "style": {
         "navigationBarTitleText": "拦截器"

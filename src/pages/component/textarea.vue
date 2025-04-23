@@ -18,5 +18,6 @@ const value = ref('');
 <style lang="scss" scoped>
 uni-textarea {
 	width: 100%;
+	box-sizing: border-box;
 }
 </style>
