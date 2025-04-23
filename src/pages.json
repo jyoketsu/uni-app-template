@@ -224,40 +224,32 @@
     "borderStyle": "@tabBorderStyle",
     "height": "50px",
     "fontSize": "10px",
-    "iconWidth": "24px",
+    "iconWidth": "18px",
     "spacing": "3px",
     // "iconfontSrc": "static/iconfont.ttf", // app tabbar 字体.ttf文件路径 app 3.4.4+
     "list": [
       {
         "pagePath": "pages/start/index",
-        // "iconPath": "static/image/icon_component.png",
-        // "selectedIconPath": "static/image/icon_component_HL.png",
+        "iconPath": "@startIconPath",
+        "selectedIconPath": "@startSelectedIconPath",
         "text": "开始"
-        // "iconfont": {
-        //   // 优先级高于 iconPath，该属性依赖 tabbar 根节点的 iconfontSrc
-        //   "text": "\ue102",
-        //   "selectedText": "\ue103",
-        //   "fontSize": "17px",
-        //   "color": "#000000",
-        //   "selectedColor": "#0000ff"
-        // }
       },
       {
         "pagePath": "pages/component/index",
-        // "iconPath": "static/image/icon_API.png",
-        // "selectedIconPath": "static/image/icon_API_HL.png",
+        "iconPath": "@componentsIconPath",
+        "selectedIconPath": "@componentsSelectedIconPath",
         "text": "内置组件"
       },
       {
         "pagePath": "pages/uni-api/index",
-        // "iconPath": "static/image/icon_API.png",
-        // "selectedIconPath": "static/image/icon_API_HL.png",
+        "iconPath": "@apiIconPath",
+        "selectedIconPath": "@apiSelectedIconPath",
         "text": "API"
       },
       {
         "pagePath": "pages/uni-ui/index",
-        // "iconPath": "static/image/icon_API.png",
-        // "selectedIconPath": "static/image/icon_API_HL.png",
+        "iconPath": "@uiIconPath",
+        "selectedIconPath": "@uiSelectedIconPath",
         "text": "扩展组件"
       }
     ]
