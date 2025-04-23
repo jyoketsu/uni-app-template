@@ -193,9 +193,21 @@
       }
     },
     {
-      "path": "pages/uni-api/interceptor",
+      "path": "pages/uni-api/storage",
       "style": {
-        "navigationBarTitleText": "拦截器"
+        "navigationBarTitleText": "数据缓存"
+      }
+    },
+    {
+      "path": "pages/uni-api/prompt",
+      "style": {
+        "navigationBarTitleText": "交互反馈"
+      }
+    },
+    {
+      "path": "pages/uni-api/navigationbar",
+      "style": {
+        "navigationBarTitleText": "设置导航条"
       }
     },
     {

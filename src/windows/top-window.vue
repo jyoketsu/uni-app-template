@@ -14,7 +14,7 @@ export default {
 			}, {
 				id: 'uni-api',
 				name: 'API',
-				firstPage: 'interceptor'
+				firstPage: 'storage'
 			}, {
 				id: 'uni-ui',
 				name: '扩展组件',
