@@ -139,9 +139,27 @@
       }
     },
     {
+      "path": "pages/component/input",
+      "style": {
+        "navigationBarTitleText": "input"
+      }
+    },
+    {
+      "path": "pages/component/textarea",
+      "style": {
+        "navigationBarTitleText": "textarea"
+      }
+    },
+    {
       "path": "pages/component/checkbox",
       "style": {
         "navigationBarTitleText": "checkbox"
+      }
+    },
+    {
+      "path": "pages/component/radio",
+      "style": {
+        "navigationBarTitleText": "radio"
       }
     },
     {

@@ -20,8 +20,17 @@ const list = [{
 	id: "button",
 	name: 'button'
 }, {
+	id: 'input',
+	name: 'input'
+}, {
+	id: 'textarea',
+	name: 'textarea'
+}, {
 	id: 'checkbox',
 	name: 'checkbox'
+}, {
+	id: 'radio',
+	name: 'radio'
 }, {
 	id: 'icon',
 	name: 'icon'
