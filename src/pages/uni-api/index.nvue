@@ -1,10 +1,16 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import TabbarPage from './tabbar.vue';
+
 const props = defineProps({
 	active: {
 		type: String,
 		default: ''
 	}
 })
+
+const showTabbarPage = ref(false);
+
 const list = [{
 	id: 'storage',
 	name: '数据缓存'
@@ -14,19 +20,51 @@ const list = [{
 }, {
 	id: 'navigationbar',
 	name: "设置导航条"
+}, {
+	id: 'tabbar',
+	name: "设置TabBar"
+}, {
+	id: 'animation',
+	name: '动画'
+}, {
+	id: 'scroll',
+	name: '页面滚动'
 }]
+
+const goPage = (id: string) => {
+	if (id === 'tabbar') {
+		// @ts-ignore
+		const windowWidth = uni.getSystemInfoSync().windowWidth;
+		if (windowWidth < 768) {
+			showTabbarPage.value = true;
+		} else {
+			// @ts-ignore
+			uni.showToast({
+				title: '当前平台不支持',
+				icon: 'none'
+			});
+		}
+	} else {
+		// @ts-ignore
+		uni.navigateTo({
+			url: `/pages/uni-api/${id}`
+		})
+	}
+}
+
 </script>
 
 <template>
-	<div class="content">
+	<tabbar-page v-if="showTabbarPage" @back="showTabbarPage = false" />
+	<div v-else class="content">
 		<view class="description hideOnPc">
 			<text>uni-app的接口能力，文档详见：</text>
 			<uni-link href="https://uniapp.dcloud.io/api/" text="https://uniapp.dcloud.io/api/"></uni-link>
 		</view>
 		<view class="buttons">
-			<navigator v-for="item in list" :url="`/pages/uni-api/${item.id}`" class="tab-bar-navigator">
+			<view v-for="item in list" class="tab-bar-navigator" @click="goPage(item.id)">
 				<text :class="active === item.id ? 'active' : ''">{{ item.name }}</text>
-			</navigator>
+			</view>
 		</view>
 	</div>
 </template>
@@ -48,6 +86,7 @@ const list = [{
 	text-align: center;
 	border-radius: 5px;
 	border: 1px solid #eaecef;
+	cursor: pointer;
 }
 
 .uni-app--showleftwindow .tab-bar-navigator {

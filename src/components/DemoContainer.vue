@@ -16,6 +16,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .content {
+	position: relative;
 	row-gap: 45rpx;
 }
 

@@ -211,6 +211,24 @@
       }
     },
     {
+      "path": "pages/uni-api/tabbar",
+      "style": {
+        "navigationBarTitleText": "设置TabBar"
+      }
+    },
+    {
+      "path": "pages/uni-api/animation",
+      "style": {
+        "navigationBarTitleText": "动画"
+      }
+    },
+    {
+      "path": "pages/uni-api/scroll",
+      "style": {
+        "navigationBarTitleText": "页面滚动"
+      }
+    },
+    {
       "path": "pages/uni-ui/uni-badge",
       "style": {
         "navigationBarTitleText": "数字角标"
