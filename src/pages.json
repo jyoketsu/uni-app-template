@@ -233,6 +233,30 @@
       "style": {
         "navigationBarTitleText": "数字角标"
       }
+    },
+    {
+      "path": "pages/uni-ui/uni-breadcrumb",
+      "style": {
+        "navigationBarTitleText": "面包屑"
+      }
+    },
+    {
+      "path": "pages/uni-ui/uni-calendar",
+      "style": {
+        "navigationBarTitleText": "日历"
+      }
+    },
+    {
+      "path": "pages/uni-ui/uni-card",
+      "style": {
+        "navigationBarTitleText": "卡片"
+      }
+    },
+    {
+      "path": "pages/uni-ui/uni-collapse",
+      "style": {
+        "navigationBarTitleText": "折叠面板"
+      }
     }
   ],
   "tabBar": {

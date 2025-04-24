@@ -20,7 +20,7 @@ const list = [{
 }, {
 	id: 'uni-collapse',
 	name: 'uni-collapse (折叠面板)'
-}]
+},]
 </script>
 
 <template>
