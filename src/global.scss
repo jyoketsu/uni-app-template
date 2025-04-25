@@ -51,6 +51,11 @@ textarea,
   padding: 12px;
 }
 
+.uni-card__cover {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (prefers-color-scheme: dark) {
   .uni-top-window {
     border-bottom: 1px solid #333;

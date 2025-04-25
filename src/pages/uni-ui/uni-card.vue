@@ -46,18 +46,65 @@ const handleClick = () => {
 		</DemoItem>
 
 		<DemoItem title="卡片封面图+操作栏">
-			<uni-card :cover="cover" @click="onClick">
-				<text class="uni-body">这是一个带封面和操作栏的卡片示例，此示例展示了封面插槽和操作栏插槽的用法。</text>
-				<view slot="actions" class="card-actions">
-					<view class="card-actions-item" @click="actionsClick('分享')">
+			<view>
+				<uni-card :cover="cover">
+					<text>这是一个带封面和操作栏的卡片示例，此示例展示了封面插槽和操作栏插槽的用法。</text>
+					<template v-slot:actions>
+						<view class="card-actions">
+							<view class="card-actions-item">
+								<uni-icons type="pyq" size="18" color="#999"></uni-icons>
+								<text class="card-actions-item-text">分享</text>
+							</view>
+							<view class="card-actions-item">
+								<uni-icons type="heart" size="18" color="#999"></uni-icons>
+								<text class="card-actions-item-text">点赞</text>
+							</view>
+							<view class="card-actions-item">
+								<uni-icons type="chatbubble" size="18" color="#999"></uni-icons>
+								<text class="card-actions-item-text">评论</text>
+							</view>
+						</view>
+					</template>
+				</uni-card>
+			</view>
+		</DemoItem>
+
+		<DemoItem title="自定义卡片标题" style="width: 100%;">
+			<uni-card title="基础卡片" :isFull="true" sub-title="副标题" extra="额外信息" :thumbnail="avatar">
+				<template v-slot:title>
+					<uni-list>
+						<uni-list-item :show-switch="true" title="这是自定义标题" />
+					</uni-list>
+				</template>
+				<text class="uni-body">自定义卡片标题。</text>
+			</uni-card>
+		</DemoItem>
+
+		<DemoItem title="自定义封面+列表" style="width:100%">
+			<uni-card padding="0" spacing="0">
+				<template v-slot:cover>
+					<view class="custom-cover">
+						<image class="cover-image" mode="aspectFill" :src="cover">
+						</image>
+						<view class="cover-content">
+							<text class="uni-subtitle uni-white">今日新闻热点</text>
+						</view>
+					</view>
+				</template>
+				<uni-list>
+					<uni-list-item title="今日新闻" showArrow></uni-list-item>
+					<uni-list-item title="今日新闻" showArrow></uni-list-item>
+				</uni-list>
+				<view slot="actions" class="card-actions no-border">
+					<view class="card-actions-item">
 						<uni-icons type="pengyouquan" size="18" color="#999"></uni-icons>
 						<text class="card-actions-item-text">分享</text>
 					</view>
-					<view class="card-actions-item" @click="actionsClick('点赞')">
+					<view class="card-actions-item">
 						<uni-icons type="heart" size="18" color="#999"></uni-icons>
 						<text class="card-actions-item-text">点赞</text>
 					</view>
-					<view class="card-actions-item" @click="actionsClick('评论')">
+					<view class="card-actions-item">
 						<uni-icons type="chatbubble" size="18" color="#999"></uni-icons>
 						<text class="card-actions-item-text">评论</text>
 					</view>
@@ -88,5 +135,30 @@ const handleClick = () => {
 	font-size: 12px;
 	color: #666;
 	margin-left: 5px;
+}
+
+.cover-image {
+	width: 100%;
+}
+
+.custom-cover {
+	flex: 1;
+	flex-direction: row;
+	position: relative;
+}
+
+.cover-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background-color: rgba(0, 0, 0, .4);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 15px;
+	font-size: 14px;
+	color: #fff;
 }
 </style>
