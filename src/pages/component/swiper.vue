@@ -37,4 +37,27 @@ const duration = ref(500);
 	width: 100%;
 	height: 400rpx;
 }
+
+.swiper-item {
+	width: 100%;
+	height: 100%;
+	color: #FFFFFF;
+	font-size: 32px;
+	font-weight: bolder;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+swiper-item:nth-child(1)>.swiper-item {
+	background-color: hsla(80, 70%, 70%);
+}
+
+swiper-item:nth-child(2)>.swiper-item {
+	background-color: hsla(40, 70%, 70%);
+}
+
+swiper-item:nth-child(3)>.swiper-item {
+	background-color: hsla(0, 70%, 70%);
+}
 </style>
