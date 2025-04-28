@@ -17,6 +17,7 @@ const props = defineProps({
 	display: flex;
 	flex-direction: column;
 	row-gap: 8px;
+	overflow: hidden;
 }
 
 .title {

@@ -193,6 +193,24 @@
       }
     },
     {
+      "path": "pages/component/image",
+      "style": {
+        "navigationBarTitleText": "image"
+      }
+    },
+    {
+      "path": "pages/component/video",
+      "style": {
+        "navigationBarTitleText": "video"
+      }
+    },
+    {
+      "path": "pages/component/web-view",
+      "style": {
+        "navigationBarTitleText": "web-view"
+      }
+    },
+    {
       "path": "pages/uni-api/storage",
       "style": {
         "navigationBarTitleText": "数据缓存"

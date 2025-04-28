@@ -41,11 +41,13 @@ uni-left-window {
 
 .active {
   color: $uni-color-primary;
+  font-weight: bold;
 }
 
 input,
 textarea,
-.uni-picker-container {
+.uni-picker-container,
+.uni-input {
   border: 1px solid $uni-border-color;
   border-radius: 8px;
   padding: 12px;

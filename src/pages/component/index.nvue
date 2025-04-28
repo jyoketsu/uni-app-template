@@ -47,12 +47,21 @@ const list = [{
 	id: 'form',
 	name: 'form'
 }, {
+	id: 'image',
+	name: 'image'
+}, {
+	id: 'video',
+	name: 'video'
+}, {
+	id: 'web-view',
+	name: 'web-view'
+}, {
 	id: 'icon',
 	name: 'icon'
 }, {
 	id: 'progress',
 	name: 'progress'
-}]
+},]
 </script>
 
 <template>
