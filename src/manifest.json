@@ -1,7 +1,7 @@
 {
   "name": "uni-app-template",
   "appid": "",
-  "description": "",
+  "description": "一款基于 uni-app 框架的 ​​多端小程序开发模板​​，提供标准化项目结构、常用组件封装和开箱即用的功能模块，助力开发者快速构建跨平台应用。",
   "locale": "zh-Hans", // 设置默认语言，
   "versionName": "0.0.1",
   "versionCode": "100",

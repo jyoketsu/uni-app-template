@@ -247,6 +247,12 @@
       }
     },
     {
+      "path": "pages/uni-api/system",
+      "style": {
+        "navigationBarTitleText": "系统"
+      }
+    },
+    {
       "path": "pages/uni-ui/uni-badge",
       "style": {
         "navigationBarTitleText": "数字角标"

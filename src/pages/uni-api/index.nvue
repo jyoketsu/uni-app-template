@@ -29,6 +29,9 @@ const list = [{
 }, {
 	id: 'scroll',
 	name: '页面滚动'
+}, {
+	id: "system",
+	name: "系统"
 }]
 
 const goPage = (id: string) => {
