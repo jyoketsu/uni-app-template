@@ -12,10 +12,10 @@ onHide(() => {
 </script>
 
 <style lang="scss">
-// CSS原生语法（不推荐），变量无法解析
-// @import url(./global.scss);
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
 
-// SCSS专用语法（推荐）
 @import "./global.scss";
 
 @font-face {
