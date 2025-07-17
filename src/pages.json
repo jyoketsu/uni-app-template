@@ -223,6 +223,12 @@
       }
     },
     {
+      "path": "pages/uni-api/media",
+      "style": {
+        "navigationBarTitleText": "媒体"
+      }
+    },
+    {
       "path": "pages/uni-api/navigationbar",
       "style": {
         "navigationBarTitleText": "设置导航条"

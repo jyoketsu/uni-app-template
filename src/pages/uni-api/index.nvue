@@ -18,6 +18,9 @@ const list = [{
 	id: 'prompt',
 	name: '交互反馈'
 }, {
+	id: 'media',
+	name: '媒体'
+}, {
 	id: 'navigationbar',
 	name: "设置导航条"
 }, {
