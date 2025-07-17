@@ -93,3 +93,7 @@
 ## 微信登录
 
 - [wechat-login.vue](./src/pages/start/wechat-login.vue)
+
+## Tailwind CSS
+- [weapp-tailwindcss](https://weapp-tw.icebreaker.top/)
+- [参考](https://github.com/sonofmagic/uni-app-vite-vue3-tailwind-vscode-template)
