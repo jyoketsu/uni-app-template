@@ -120,7 +120,7 @@ const handleUploadImage = () => {
 		</DemoItem>
 
 		<DemoItem class="w-full" title="选择图片 & 上传图片">
-			<button @click="handleUploadImage" :loading="uploading">选择或者拍摄图片</button>
+			<button @click="handleUploadImage" :loading="uploading" :disabled="uploading">选择或者拍摄图片</button>
 			<view v-if="imageUrl" class="w-full h-[200px]">
 				<image class="size-full" :src="imageUrl" mode="aspectFit" />
 			</view>

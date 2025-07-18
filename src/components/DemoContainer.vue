@@ -15,11 +15,6 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
-.content {
-	position: relative;
-	row-gap: 45rpx;
-}
-
 .doc-url-name {
 	color: $uni-color-title;
 }

@@ -6,11 +6,11 @@ import postcssPlugins from './postcss.config';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    uni(),
     UnifiedViteWeappTailwindcssPlugin({
       rem2rpx: true,
       disabled: false,
     }),
+    uni(),
   ],
   css: {
     postcss: {
