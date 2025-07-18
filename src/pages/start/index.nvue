@@ -10,7 +10,7 @@ const list = [{
 	name: '页面'
 }, {
 	id: 'preprocessor',
-	name: '条件编译'
+	name: '多平台'
 }, {
 	id: "css",
 	name: "样式"
@@ -61,13 +61,6 @@ const list = [{
 	row-gap: 2px;
 }
 
-.tab-bar-navigator {
-	padding: 8px 5px;
-	text-align: center;
-	border-radius: 5px;
-	border: 1px solid #eaecef;
-}
-
 .uni-app--showleftwindow .tab-bar-navigator {
 	text-align: left;
 	border: unset;
@@ -76,4 +69,5 @@ const list = [{
 .description {
 	margin-bottom: 30rpx;
 }
+
 </style>

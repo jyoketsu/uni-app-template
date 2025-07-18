@@ -91,12 +91,6 @@ const list = [{
 	row-gap: 2px;
 }
 
-.tab-bar-navigator {
-	padding: 8px 5px;
-	text-align: center;
-	border-radius: 5px;
-	border: 1px solid #eaecef;
-}
 
 .uni-app--showleftwindow .tab-bar-navigator {
 	text-align: left;

@@ -46,7 +46,7 @@
 - [page.vue](./src/pages/start/page.vue)
 - [route.vue](./src/pages/start/route.vue)
 
-## 条件编译
+## 多平台
 
 - [preprocessor.vue](./src/pages/start/preprocessor.vue)
 

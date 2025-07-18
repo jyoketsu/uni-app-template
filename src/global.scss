@@ -2,6 +2,13 @@ body {
   margin: unset;
 }
 
+.tab-bar-navigator {
+	padding: 8px 5px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #eaecef !important;
+}
+
 .uni-top-window {
   border-bottom: 1px solid #eaecef;
   z-index: 999;
@@ -35,7 +42,7 @@ uni-left-window {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  row-gap: 12rpx;
+  row-gap: 45rpx;
 }
 
 .title {
@@ -82,5 +89,9 @@ textarea,
   .uni-section__content-title,
   .uni-list-item__content-title {
     color: $uni-text-color-inverse !important;
+  }
+
+  .tab-bar-navigator {
+    border: 1px solid #4c4c4c !important;
   }
 }

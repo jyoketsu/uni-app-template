@@ -43,7 +43,7 @@
     {
       "path": "pages/start/preprocessor",
       "style": {
-        "navigationBarTitleText": "条件编译"
+        "navigationBarTitleText": "多平台"
       }
     },
     {

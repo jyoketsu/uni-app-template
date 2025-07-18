@@ -27,7 +27,7 @@ const handleClick = () => {
 
 <template>
 	<DemoContainer doc-url="https://uniapp.dcloud.net.cn/tutorial/platform.html">
-		<DemoItem title="示例1" style="width: 100%;">
+		<DemoItem title="条件编译(ifdef)" style="width: 100%;">
 			<!-- #ifdef H5 || MP-WEIXIN -->
 
 			<!-- #ifdef H5 -->
@@ -41,12 +41,16 @@ const handleClick = () => {
 			<!-- #endif -->
 		</DemoItem>
 
-		<DemoItem title="示例2">
+		<DemoItem title="条件编译(ifndef)">
 			<!-- #ifndef H5-->
 			<text>这个不是H5</text>
 			<!-- #else -->
 			<text>这个是H5</text>
 			<!-- #endif -->
+		</DemoItem>
+
+		<DemoItem title="环境变量(process.env.UNI_PLATFORM)">
+			<text class="text-gray-500 italic">查看vite.config.ts中的用法</text>
 		</DemoItem>
 	</DemoContainer>
 </template>
