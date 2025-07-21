@@ -9,6 +9,11 @@ body {
 	border: 1px solid #eaecef !important;
 }
 
+.uni-app--showleftwindow .tab-bar-navigator {
+	text-align: left;
+	border: unset !important;
+}
+
 .uni-top-window {
   border-bottom: 1px solid #eaecef;
   z-index: 999;

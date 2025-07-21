@@ -4,6 +4,7 @@ import cssMacro from 'weapp-tailwindcss/css-macro'
 
 export default <Config>{
 	content: ['./index.html', './src/**/*.{html,js,ts,jsx,tsx,vue}'],
+	darkMode: 'media',
 	theme: {
 		extend: {
 			// colors: {

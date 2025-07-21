@@ -87,12 +87,6 @@ const goPage = (id: string) => {
 	row-gap: 2px;
 }
 
-
-.uni-app--showleftwindow .tab-bar-navigator {
-	text-align: left;
-	border: unset;
-}
-
 .description {
 	margin-bottom: 30rpx;
 }
