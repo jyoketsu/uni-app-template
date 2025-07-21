@@ -259,6 +259,12 @@
       }
     },
     {
+      "path": "pages/uni-api/clipboard",
+      "style": {
+        "navigationBarTitleText": "剪贴板"
+      }
+    },
+    {
       "path": "pages/uni-ui/uni-badge",
       "style": {
         "navigationBarTitleText": "数字角标"

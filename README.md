@@ -1,5 +1,7 @@
 # uni-app-template
 
+uni-app Vue3 + Vite 模板，集成 `TypeScript`、`Tailwind CSS`、国际化（多语言）、暗黑模式、`Iconify`、`Iconfont` 及宽屏适配等常用方案。
+
 [官方文档](https://uniapp.dcloud.net.cn/tutorial/)  
 [微信小程序文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)  
 [官方示例](https://github.com/dcloudio/hello-uniapp/)
@@ -95,5 +97,6 @@
 - [wechat-login.vue](./src/pages/start/wechat-login.vue)
 
 ## Tailwind CSS
+
 - [weapp-tailwindcss](https://weapp-tw.icebreaker.top/)
 - [参考](https://github.com/sonofmagic/uni-app-vite-vue3-tailwind-vscode-template)

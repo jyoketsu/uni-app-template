@@ -20,14 +20,16 @@ onLoad(() => {
     <DemoItem title="当前主题">
       <text>{{ `当前主题是: ${theme}` }}</text>
     </DemoItem>
-    <DemoItem title="页面 css 适配">
+    <DemoItem class="w-full" title="页面 css 适配">
       <view class="dark-css-demo-wrapper">
         <text>这是测试文字</text>
       </view>
     </DemoItem>
-    <DemoItem title="tailwindcss 适配">
+    <DemoItem class="w-full" title="tailwindcss 适配">
       <view class="bg-purple-400 dark:bg-purple-950 p-[15px] rounded-[8px]">
-        <text class="text-slate-800 dark:text-white">Tailwind CSS 测试文字</text>
+        <text class="text-slate-800 dark:text-white">
+          Tailwind CSS 测试文字
+        </text>
       </view>
     </DemoItem>
   </DemoContainer>

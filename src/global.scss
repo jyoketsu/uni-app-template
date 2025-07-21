@@ -3,15 +3,16 @@ body {
 }
 
 .tab-bar-navigator {
-	padding: 8px 5px;
-	text-align: center;
-	border-radius: 5px;
-	border: 1px solid #eaecef !important;
+  padding: 8px 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #eaecef !important;
+  cursor: pointer;
 }
 
 .uni-app--showleftwindow .tab-bar-navigator {
-	text-align: left;
-	border: unset !important;
+  text-align: left;
+  border: unset !important;
 }
 
 .uni-top-window {

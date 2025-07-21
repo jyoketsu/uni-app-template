@@ -35,6 +35,9 @@ const list = [{
 }, {
 	id: "system",
 	name: "系统"
+}, {
+	id: "clipboard",
+	name: "剪贴板"
 }]
 
 const goPage = (id: string) => {
