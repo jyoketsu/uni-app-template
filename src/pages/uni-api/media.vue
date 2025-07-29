@@ -79,6 +79,7 @@ const handleUploadImage = () => {
 			url: 'https://unidemo.dcloud.net.cn/upload',
 			filePath: imageSrc,
 			fileType: 'image',
+			// 上传的文件字段名
 			name: 'data',
 			formData: {
 				'user': 'test'

@@ -8,15 +8,16 @@ import DemoContainer from '@/components/DemoContainer.vue';
 const routeType = ref<'navigator' | 'api'>('navigator');
 
 onLoad(() => {
+	// TabBar 页面会缓存，onLoad 不会重复触发。onShow 会重复触发。
+
 	// 接受上页的参数，联网取数据，更新data
 	console.log('---page lifecycle: onLoad---');
 
 	const app = getApp();
-	console.log('---app---', app.globalData)
+	console.log('---app---', app.globalData);
 
 	const currentPages = getCurrentPages();
 	console.log('---currentPages---', currentPages);
-
 })
 
 onShow(() => {

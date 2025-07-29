@@ -103,6 +103,24 @@
       }
     },
     {
+      "path": "pages/start/pinia",
+      "style": {
+        "navigationBarTitleText": "Pinia"
+      }
+    },
+    {
+      "path": "pages/start/scroll-list",
+      "style": {
+        "navigationBarTitleText": "列表滚动加载与刷新"
+      }
+    },
+    {
+      "path": "pages/start/test",
+      "style": {
+        "navigationBarTitleText": "测试页面"
+      }
+    },
+    {
       "path": "pages/component/view",
       "style": {
         "navigationBarTitleText": "视图容器"

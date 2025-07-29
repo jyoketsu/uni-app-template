@@ -32,6 +32,12 @@ const list = [{
 }, {
 	id: 'wechat-login',
 	name: '微信登录'
+}, {
+	id: 'pinia',
+	name: 'Pinia'
+}, {
+	id: 'scroll-list',
+	name: '列表滚动加载与刷新'
 }]
 </script>
 
@@ -64,5 +70,4 @@ const list = [{
 .description {
 	margin-bottom: 30rpx;
 }
-
 </style>

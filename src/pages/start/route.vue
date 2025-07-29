@@ -3,7 +3,7 @@ const props = defineProps<{ type: 'navigator' | 'api' }>()
 
 const navigateTo = () => {
 	uni.navigateTo({
-		url: '/pages/start/css'
+		url: '/pages/start/test?id=1&name=test'
 	});
 }
 
@@ -20,6 +20,7 @@ const redirectTo = () => {
 }
 
 const switchTab = () => {
+	// 跳转到tabBar页面只能使用 switchTab 跳转
 	uni.switchTab({
 		// url需指向tabBar中的pagePath
 		url: '/pages/component/index'
@@ -38,8 +39,8 @@ const reLaunch = () => {
 		<template v-if="props.type === 'navigator'">
 			<view class="content buttons">
 				<uni-link href="https://uniapp.dcloud.net.cn/component/navigator" text="navigator"></uni-link>
-				<navigator url="/pages/start/css">
-					<button>打开新页面</button>
+				<navigator url="/pages/start/test?id=1&name=test">
+					<button>跳转页面并传递参数</button>
 				</navigator>
 
 				<navigator open-type="navigateBack">
@@ -52,7 +53,7 @@ const reLaunch = () => {
 
 				<!-- url需指向tabBar中的pagePath -->
 				<navigator url="/pages/component/index" open-type="switchTab">
-					<button>切换 Tab</button>
+					<button>跳转到tabBar</button>
 				</navigator>
 
 				<navigator url="/pages/start/page" open-type="reLaunch">
@@ -64,10 +65,10 @@ const reLaunch = () => {
 		<template v-else>
 			<view class="content buttons">
 				<uni-link href="https://uniapp.dcloud.net.cn/api/router" text="Router API"></uni-link>
-				<button style="width: 100%;" @click="navigateTo">打开新页面</button>
+				<button style="width: 100%;" @click="navigateTo">跳转页面并传递参数</button>
 				<button style="width: 100%;" @click="navigateBack">返回</button>
 				<button style="width: 100%;" @click="redirectTo">重定向</button>
-				<button style="width: 100%;" @click="switchTab">切换 Tab</button>
+				<button style="width: 100%;" @click="switchTab">跳转到tabBar</button>
 				<button style="width: 100%;" @click="reLaunch">重新加载</button>
 			</view>
 		</template>
