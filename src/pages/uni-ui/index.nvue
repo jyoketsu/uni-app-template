@@ -6,6 +6,9 @@ const props = defineProps({
 	}
 })
 const list = [{
+	id: 'uni-popup',
+	name: 'uni-popup (弹出层)'
+}, {
 	id: 'uni-badge',
 	name: 'uni-badge (数字角标)'
 }, {

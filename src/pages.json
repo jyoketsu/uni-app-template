@@ -241,9 +241,9 @@
       }
     },
     {
-      "path": "pages/uni-api/media",
+      "path": "pages/uni-api/image",
       "style": {
-        "navigationBarTitleText": "媒体"
+        "navigationBarTitleText": "图片选择、上传、下载"
       }
     },
     {
@@ -310,6 +310,12 @@
       "path": "pages/uni-ui/uni-collapse",
       "style": {
         "navigationBarTitleText": "折叠面板"
+      }
+    },
+    {
+      "path": "pages/uni-ui/uni-popup",
+      "style": {
+        "navigationBarTitleText": "弹出层"
       }
     }
   ],

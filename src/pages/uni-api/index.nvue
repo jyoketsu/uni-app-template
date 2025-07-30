@@ -18,8 +18,8 @@ const list = [{
 	id: 'prompt',
 	name: '交互反馈'
 }, {
-	id: 'media',
-	name: '媒体'
+	id: 'image',
+	name: '图片选择、上传、下载'
 }, {
 	id: 'navigationbar',
 	name: "设置导航条"

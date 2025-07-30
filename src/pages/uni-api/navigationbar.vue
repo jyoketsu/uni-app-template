@@ -19,6 +19,7 @@ const handleSetNavigationBarTitle = () => {
 }
 
 const handleSetNavigationBarColor = () => {
+	// 如果需要在页面进入时设置标题，可以在onReady内执行
 	uni.setNavigationBarColor({
 		frontColor: '#ffffff', // 仅支持 #ffffff 和 #000000
 		backgroundColor: '#DB4D6D',
