@@ -2,9 +2,11 @@
 import DemoContainer from '@/components/DemoContainer.vue';
 import { wechatLogin } from '@/utils/api/auth';
 import { ref } from 'vue';
+import { useUserStore } from '@/stores/user';
+import { storeToRefs } from 'pinia';
 
-const code = ref('');
-const userInfo = ref<{ nickName: string, avatarUrl: string } | null>(null);
+const { userInfo } = storeToRefs(useUserStore());
+const { setUserInfo, logout } = useUserStore();
 
 const handleLogin = () => {
 	uni.getProvider({
@@ -16,43 +18,42 @@ const handleLogin = () => {
 					desc: '获取用户信息',
 					success: (profileRes) => {
 						console.log('用户信息:', profileRes.userInfo);
-						userInfo.value = profileRes.userInfo;
 						uni.login({
 							provider: 'weixin',
 							success: async (loginRes) => {
-								// 将loginRes.code和profileRes.userInfo发送给后端
-								code.value = loginRes.code;
-								console.log('登录凭证:', loginRes.code);
-
-								// 发送code到服务器
+								// 发送code到后端
 								const res = await wechatLogin({ code: loginRes.code });
+								setUserInfo(res.data.username, res.data.avatar);
 								// 登录请求成功后，从res.data.accessToken获取Token，存储到Storage。
+								uni.setStorageSync('token', res.data.accessToken);
+								uni.setStorageSync('refreshToken', res.data.refreshToken);
 								// 小程序后续请求在header中携带Authorization: Bearer <token>
-								console.log('登录成功:', res);
 							}
 						});
-
 					}
 				});
 			}
 		}
 	});
 }
+
+const handleLogout = () => {
+	logout();
+}
 </script>
 
 <template>
 	<DemoContainer doc-url="https://uniapp.dcloud.net.cn/api/plugins/login.html">
 		<!--  #ifdef MP-WEIXIN  -->
-		<button @click="handleLogin">微信登录</button>
+		<button v-if="!userInfo" @click="handleLogin">微信登录</button>
+		<button v-else @click="handleLogout">退出登录</button>
 		<!-- #else -->
 		<text>请在微信小程序中打开</text>
 		<!-- #endif -->
-		<view v-if="code">
-			<text>{{ `登录凭证：${code}` }}</text>
-		</view>
 		<view v-if="userInfo" class="user-info">
-			<image class="avatar" :src="userInfo.avatarUrl" />
-			<text>{{ userInfo.nickName }}</text>
+			<image v-if="userInfo.avatar" class="avatar" :src="userInfo.avatar" />
+			<image v-else class="avatar" src="~@/static/defaultAvatar.jpeg" />
+			<text>{{ userInfo.username }}</text>
 		</view>
 	</DemoContainer>
 </template>

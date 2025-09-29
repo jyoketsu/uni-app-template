@@ -1,5 +1,6 @@
 // 请求拦截器
 uni.addInterceptor("request", {
+  // 调用前触发
   invoke(args) {
     // 添加全局请求头
     args.header = {
@@ -13,6 +14,7 @@ uni.addInterceptor("request", {
       uni.showLoading({ title: "加载中" });
     }
   },
+  // 调用成功触发
   success(res) {
     // 统一处理响应状态码
     if (res.statusCode >= 400) {
@@ -22,9 +24,13 @@ uni.addInterceptor("request", {
     }
     return res.data;
   },
+
+  // 调用失败触发
   fail(err) {
     return Promise.reject(new Error(`网络错误：${err.errMsg}`));
   },
+
+  // 调用结束触发（成功失败都会触发）
   complete() {
     uni.hideLoading();
   },
@@ -40,7 +46,7 @@ const showError = (err: Error) => {
 
   // 401跳转登录页
   if ((err as any).statusCode === 401) {
-    uni.reLaunch({ url: "/pages/login" });
+    uni.reLaunch({ url: "/pages/start/wechat-login" });
   }
 };
 
