@@ -68,6 +68,35 @@ export const request = {
 		});
 	},
 
+	put<T = any>(
+		{ url, data, header, isAuth }:
+			{
+				url: string,
+				data?: object,
+				header?: object,
+				isAuth?: boolean,
+			}
+	):
+		// Promise<ApiResponse<T>>
+		Promise<T> {
+		return new Promise(async function (resolve, reject) {
+			try {
+				const response = await uni.request({
+					url: (isAuth ? authUrl : baseUrl) + url,
+					method: 'PUT',
+					data,
+					header
+				})
+				resolve(response.data as
+					// ApiResponse<T>
+					Promise<T>
+				);
+			} catch (error) {
+				reject(error);
+			}
+		});
+	},
+
 	delete<T = any>(
 		{ url, data, header, isAuth }:
 			{

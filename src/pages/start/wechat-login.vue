@@ -4,9 +4,10 @@ import { wechatLogin } from '@/utils/api/auth';
 import { ref } from 'vue';
 import { useUserStore } from '@/stores/user';
 import { storeToRefs } from 'pinia';
+import { User } from '@/interface/User';
 
 const { userInfo } = storeToRefs(useUserStore());
-const { setUserInfo, logout } = useUserStore();
+const { setUserInfo, logout, updateUser } = useUserStore();
 
 const handleLogin = () => {
 	uni.getProvider({
@@ -23,7 +24,7 @@ const handleLogin = () => {
 							success: async (loginRes) => {
 								// 发送code到后端
 								const res = await wechatLogin({ code: loginRes.code });
-								setUserInfo(res.data.username, res.data.avatar);
+								setUserInfo(res.data);
 								// 登录请求成功后，从res.data.accessToken获取Token，存储到Storage。
 								uni.setStorageSync('token', res.data.accessToken);
 								uni.setStorageSync('refreshToken', res.data.refreshToken);
@@ -40,6 +41,15 @@ const handleLogin = () => {
 const handleLogout = () => {
 	logout();
 }
+
+const handleChooseAvatar = (res: any) => {
+	// 处理选择头像事件
+	const avatarUrl = res.detail.avatarUrl;
+	setUserInfo({
+		...userInfo.value,
+		avatar: avatarUrl
+	} as User);
+}
 </script>
 
 <template>
@@ -51,9 +61,13 @@ const handleLogout = () => {
 		<text>请在微信小程序中打开</text>
 		<!-- #endif -->
 		<view v-if="userInfo" class="user-info">
-			<image v-if="userInfo.avatar" class="avatar" :src="userInfo.avatar" />
-			<image v-else class="avatar" src="~@/static/defaultAvatar.jpeg" />
-			<text>{{ userInfo.username }}</text>
+			<view class="relative size-[50px]">
+				<button class="absolute inset-0 opacity-0" open-type="chooseAvatar" @chooseavatar="handleChooseAvatar">
+				</button>
+				<image v-if="userInfo.avatar" class="avatar" :src="userInfo.avatar" />
+				<image v-else class="avatar" src="~@/static/defaultAvatar.jpeg" />
+			</view>
+			<input class="flex-1" type="nickname" v-model="userInfo.username" placeholder="请输入昵称" />
 		</view>
 	</DemoContainer>
 </template>
@@ -66,6 +80,7 @@ const handleLogout = () => {
 }
 
 .user-info {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

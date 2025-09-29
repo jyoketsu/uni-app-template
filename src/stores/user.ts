@@ -1,9 +1,10 @@
-import { getUserInfo as getUserInfoApi, logout as logoutApi } from '@/utils/api/auth';
+import { User } from '@/interface/User';
+import { getUserInfo as getUserInfoApi, logout as logoutApi, updateUserInfo } from '@/utils/api/auth';
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useUserStore = defineStore('user', () => {
-	const userInfo = ref<{ username: string, avatar: string } | null>(null);
+	const userInfo = ref<User | null>(null);
 
 	const getUserInfo = async () => {
 		const token = uni.getStorageSync('token');
@@ -14,10 +15,7 @@ export const useUserStore = defineStore('user', () => {
 		try {
 			const res: any = await getUserInfoApi();
 			if (res && res.data) {
-				userInfo.value = {
-					username: res.data.username,
-					avatar: res.data.avatar
-				};
+				userInfo.value = res.data;
 			}
 		} catch (error) {
 			userInfo.value = null;
@@ -29,7 +27,7 @@ export const useUserStore = defineStore('user', () => {
 			const token = uni.getStorageSync('token');
 			const refreshToken = uni.getStorageSync('refreshToken');
 			const res: any = await logoutApi(token, refreshToken);
-			if (res.code===200) {
+			if (res.code === 200) {
 				userInfo.value = null;
 				uni.removeStorageSync('token');
 				uni.removeStorageSync('refreshToken');
@@ -39,14 +37,20 @@ export const useUserStore = defineStore('user', () => {
 		}
 	}
 
-	const setUserInfo = async (username: string, avatar: string) => {
-		userInfo.value = { username, avatar };
+	const setUserInfo = (data: User) => {
+		userInfo.value = data;
 	};
+
+	const updateUser = async (data: User) => {
+		await updateUserInfo(data);
+		userInfo.value = data;
+	}
 
 	return {
 		userInfo,
 		getUserInfo,
 		setUserInfo,
 		logout,
+		updateUser,
 	};
 });
