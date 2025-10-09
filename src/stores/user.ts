@@ -1,10 +1,9 @@
-import { User } from '@/interface/User';
 import { getUserInfo as getUserInfoApi, logout as logoutApi, updateUserInfo } from '@/utils/api/auth';
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useUserStore = defineStore('user', () => {
-	const userInfo = ref<User | null>(null);
+	const userInfo = ref<any>(null);
 
 	const getUserInfo = async () => {
 		const token = uni.getStorageSync('token');
@@ -37,11 +36,11 @@ export const useUserStore = defineStore('user', () => {
 		}
 	}
 
-	const setUserInfo = (data: User) => {
+	const setUserInfo = (data: any) => {
 		userInfo.value = data;
 	};
 
-	const updateUser = async (data: User) => {
+	const updateUser = async (data: any) => {
 		await updateUserInfo(data);
 		userInfo.value = data;
 	}

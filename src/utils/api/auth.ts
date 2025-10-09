@@ -1,4 +1,3 @@
-import { User } from "@/interface/User";
 import { request } from "@/utils/api/index";
 
 export function wechatLogin(data: {
@@ -26,7 +25,7 @@ export function logout(accessToken: string, refreshToken: string) {
 	});
 }
 
-export function updateUserInfo(data: User) {
+export function updateUserInfo(data: any) {
 	return request.put({
 		url: "/api/auth",
 		data,

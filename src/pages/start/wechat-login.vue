@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import DemoContainer from '@/components/DemoContainer.vue';
 import { wechatLogin } from '@/utils/api/auth';
-import { ref } from 'vue';
 import { useUserStore } from '@/stores/user';
 import { storeToRefs } from 'pinia';
-import { User } from '@/interface/User';
 
 const { userInfo } = storeToRefs(useUserStore());
 const { setUserInfo, logout, updateUser } = useUserStore();
@@ -48,7 +46,7 @@ const handleChooseAvatar = (res: any) => {
 	setUserInfo({
 		...userInfo.value,
 		avatar: avatarUrl
-	} as User);
+	});
 }
 </script>
 
